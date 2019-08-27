@@ -1,49 +1,43 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>CocoaPods 从安装到使用 | 夜空</title>
-  <meta name="author" content="阿宝">
+  <title>CocoaPods 从安装到使用 | 学宝的博客</title>
+  <meta name="author" content="学宝">
   
-  <meta name="description" content="&amp;#x6CA1;&amp;#x7528;&amp;#x4F7F;&amp;#x7528;CocoaPods&amp;#x4E4B;&amp;#x524D;&amp;#xFF1A;
-
-&amp;#x6211;&amp;#x4EEC;&amp;#x9700;&amp;#x8981;&amp;#x5C06;&amp;#x7B2C;&amp;#x4E09;&amp;#x65B9;&amp;#x7684;&amp;#x6E90;&amp;#x4EE3;&amp;#x7801;&amp;#x6587;&amp;#x4EF6;&amp;#x590D;&amp;#x5236;&amp;#x5230;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;
-&amp;#x53EF;&amp;#x80FD;&amp;#x9700;&amp;#x8981;&amp;#x5404;&amp;#x79CD;&amp;#x914D;&amp;#x7F6E;
-&amp;#x9700;&amp;#x8981;&amp;#x5173;&amp;#x6CE8;&amp;#x4F9D;&amp;#x8D56;&amp;#x5305;&amp;#x7684;&amp;#x66F4;&amp;#x65B0;&amp;#xFF0C;&amp;#x5E76;&amp;#x624B;&amp;#x52A8;&amp;#x5904;&amp;#x7406;
-
-&amp;#x8FD9;&amp;#x4E9B;&amp;#x6D3B;&amp;#x5F88;&amp;#x70E6;&amp;#x3001;&amp;#x6CA1;&amp;#x542B;&amp;#x91CF;&amp;#x3001;&amp;#x6D6A;&amp;#x8D39;&amp;#x65F6;&amp;#x95F4;&amp;#x3002;&amp;#x8FD9;&amp;#x4E9B;&amp;#x95EE;&amp;#x9898;&amp;#x968F;&amp;#x7740;CocoaPods&amp;#x7684;&amp;#x51FA;&amp;#x73B0;&amp;#xFF0C;&amp;#x95EE;&amp;#x9898;&amp;#x89E3;&amp;#x51B3;&amp;#x4E86;&amp;#xFF01;">
+  <meta name="description" content="聊聊技术，扯扯人生">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="CocoaPods 从安装到使用"/>
-  <meta property="og:site_name" content="夜空"/>
+  <meta property="og:title" content="CocoaPods 从安装到使用">
+  <meta property="og:site_name" content="学宝的博客">
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content="undefined">
   
 
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="夜空" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="/blog/favicon.png" rel="icon">
+  <link rel="alternate" href="/blog/atom.xml" title="学宝的博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/blog/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 
 </head>
-
+</html>
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">夜空</a></h1>
-  <h2><a href="/">仰望，让泪水倒流</a></h2>
+  <h1><a href="/blog/">学宝的博客</a></h1>
+  <h2><a href="/blog/">仰望夜空，让泪水倒流</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
     
-      <li><a href="/">首页</a></li>
+      <li><a href="/blog/">首页</a></li>
     
-      <li><a href="/archives">存档</a></li>
+      <li><a href="/blog/archives">存档</a></li>
     
   </ul>
   <div class="clearfix"></div>
@@ -57,7 +51,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-07-18T05:27:15.000Z"><a href="/2016/07/18/CocoaPods-从安装到使用/">2016-07-18</a></time>
+        <time datetime="2016-07-18T05:27:15.000Z"><a href="/blog/2016/07/18/CocoaPods-从安装到使用/">2016-07-18</a></time>
       
       
   
@@ -67,7 +61,7 @@
     </header>
     <div class="entry">
       
-        <p>&#x6CA1;&#x7528;&#x4F7F;&#x7528;<a href="https://cocoapods.org/" target="_blank" rel="external">CocoaPods</a>&#x4E4B;&#x524D;&#xFF1A;</p>
+        <p>&#x6CA1;&#x7528;&#x4F7F;&#x7528;<a href="https://cocoapods.org/" target="_blank" rel="noopener">CocoaPods</a>&#x4E4B;&#x524D;&#xFF1A;</p>
 <ol>
 <li>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x9879;&#x76EE;&#x4E2D;</li>
 <li>&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5404;&#x79CD;&#x914D;&#x7F6E;</li>
@@ -78,7 +72,7 @@
 <pre><code>ruby --version
 #ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
 </code></pre><p>&#x5F53;&#x7136;&#x662F;&#x7528;0.39.0&#x7684;cocoapods&#xFF0C;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x3002;</p>
-<p><strong> &#x82E5;&#x66F4;&#x65B0; ruby </strong>&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a>&#x3002;&#x5B89;&#x88C5; Homebrew &#xFF1A;</p>
+<p><strong> &#x82E5;&#x66F4;&#x65B0; ruby </strong>&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">Homebrew</a>&#x3002;&#x5B89;&#x88C5; Homebrew &#xFF1A;</p>
 <pre><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 </code></pre><p>Homebrew &#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;&#xFF1A;</p>
 <ul>
@@ -88,7 +82,7 @@
 </ul>
 <p><strong> &#x4F7F;&#x7528; Homebrew &#x66F4;&#x65B0; ruby </strong>&#xFF1A;</p>
 <pre><code>brew install ruby
-</code></pre><p><strong> gem sources &#x7684;&#x5904;&#x7406; </strong>&#x3002;ruby &#x7684;&#x8F6F;&#x4EF6;&#x6E90; <a href="https://rubygems.org" target="_blank" rel="external">https://rubygems.org</a> &#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E9A;&#x9A6C;&#x900A;&#x7684;&#x4E91;&#x670D;&#x52A1;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;&#x5899;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4E00;&#x4E0B; ruby &#x7684;&#x6E90;&#xFF0C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x5C06;&#x5B98;&#x65B9;&#x7684; ruby &#x6E90;&#x66FF;&#x6362;&#x6210;&#x56FD;&#x5185;&#x6DD8;&#x5B9D;&#x7684;&#x6E90;&#xFF1A;</p>
+</code></pre><p><strong> gem sources &#x7684;&#x5904;&#x7406; </strong>&#x3002;ruby &#x7684;&#x8F6F;&#x4EF6;&#x6E90; <a href="https://rubygems.org" target="_blank" rel="noopener">https://rubygems.org</a> &#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E9A;&#x9A6C;&#x900A;&#x7684;&#x4E91;&#x670D;&#x52A1;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;&#x5899;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4E00;&#x4E0B; ruby &#x7684;&#x6E90;&#xFF0C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x5C06;&#x5B98;&#x65B9;&#x7684; ruby &#x6E90;&#x66FF;&#x6362;&#x6210;&#x56FD;&#x5185;&#x6DD8;&#x5B9D;&#x7684;&#x6E90;&#xFF1A;</p>
 <pre><code>gem sources -l
 gem sources --remove https://rubygems.org/
 gem sources -a https://ruby.taobao.org/
@@ -147,13 +141,13 @@ pod update
         
   
   <div class="categories">
-    <a href="/categories/CocoaPods/">CocoaPods</a>
+    <a href="/blog/categories/CocoaPods/">CocoaPods</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/工具/">工具</a>
+    <a href="/blog/tags/工具/">工具</a>
   </div>
 
         
@@ -167,16 +161,16 @@ pod update
 <section id="comment">
 <nav id="pagination" >
     
-    <a href="/2016/07/20/Objective-C-中的-Block/" class="alignleft prev" >上一页</a>
+    <a href="/blog/2016/07/20/Objective-C-中的-Block/" class="alignleft prev" >上一页</a>
     
     
-    <a href="/2016/03/01/hello-world/" class="alignright next" >下一页</a>
+    <a href="/blog/2016/02/29/被逼出的Blog/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
 
 <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="/2016/07/18/CocoaPods-从安装到使用/" data-title="CocoaPods 从安装到使用" data-url="http://yoursite.com/2016/07/18/CocoaPods-从安装到使用/"></div>
+  <div class="ds-thread" data-thread-key="/blog/2016/07/18/CocoaPods-从安装到使用/" data-title="CocoaPods 从安装到使用" data-url="http://xuebao.com/blog/2016/07/18/CocoaPods-从安装到使用/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -198,7 +192,7 @@ var duoshuoQuery = {short_name:"zpaul"};
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
     <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:yoursite.com">
+    <input type="hidden" name="q" value="site:xuebao.com/blog">
   </form>
 </div>
 
@@ -207,11 +201,11 @@ var duoshuoQuery = {short_name:"zpaul"};
   <h3 class="title">博文目录</h3>
   <ul class="entry">
   
-    <li><a href="/categories/CocoaPods/">CocoaPods</a><small>1</small></li>
+    <li><a href="/blog/categories/CocoaPods/">CocoaPods</a><small>1</small></li>
   
-    <li><a href="/categories/Objective-C/">Objective-C</a><small>1</small></li>
+    <li><a href="/blog/categories/Objective-C/">Objective-C</a><small>1</small></li>
   
-    <li><a href="/categories/心灵鸡汤/">心灵鸡汤</a><small>1</small></li>
+    <li><a href="/blog/categories/心灵鸡汤/">心灵鸡汤</a><small>1</small></li>
   
   </ul>
 </div>
@@ -222,11 +216,11 @@ var duoshuoQuery = {short_name:"zpaul"};
   <h3 class="title">标签</h3>
   <ul class="entry">
   
-    <li><a href="/tags/工具/">工具</a><small>1</small></li>
+    <li><a href="/blog/tags/工具/">工具</a><small>1</small></li>
   
-    <li><a href="/tags/开发/">开发</a><small>1</small></li>
+    <li><a href="/blog/tags/开发/">开发</a><small>1</small></li>
   
-    <li><a href="/tags/扯淡/">扯淡</a><small>1</small></li>
+    <li><a href="/blog/tags/扯淡/">扯淡</a><small>1</small></li>
   
   </ul>
 </div>
@@ -247,13 +241,13 @@ var duoshuoQuery = {short_name:"zpaul"};
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2016 阿宝
+  &copy; 2019 学宝
   
 </div>
 <div class="clearfix"></div></footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+<script src="/blog/js/jquery.imagesloaded.min.js"></script>
+<script src="/blog/js/gallery.js"></script>
 
 
 
