@@ -45,7 +45,23 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper">{% elseif theme.gitalk.enable %}
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '127508c32b906de4ac5d',
+        clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
+        id: window.location.pathname,
+        repo: 'XB-Paul.github.io',
+        owner: 'XB-Paul',
+        admin: 'XB-Paul'
+    })
+    gitalk.render('gitalk-container')
+</script>
+{% endif %}
+<article class="post">
   
   <div class="post-content">
     <header>
@@ -171,23 +187,6 @@ pod update
     })
     gitalk.render('gitalk-container')
 </script>
-
-{% elseif theme.gitalk.enable %}
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<div id="gitalk-container"></div>
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '127508c32b906de4ac5d',
-        clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
-        id: window.location.pathname,
-        repo: 'XB-Paul.github.io',
-        owner: 'XB-Paul',
-        admin: 'XB-Paul'
-    })
-    gitalk.render('gitalk-container')
-</script>
-{% endif %}
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
