@@ -72,7 +72,20 @@
   </div>
 </article>
 
-
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '127508c32b906de4ac5d',
+        clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
+        id: window.location.pathname,
+        repo: 'XB-Paul.github.io',
+        owner: 'XB-Paul',
+        admin: 'XB-Paul'
+    })
+    gitalk.render('gitalk-container')
+</script>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

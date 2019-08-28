@@ -157,37 +157,37 @@ pod update
   </div>
 </article>
 
-
-<section id="comment">
-<nav id="pagination" >
-    
-    <a href="/2016/07/20/Objective-C-中的-Block/" class="alignleft prev" >上一页</a>
-    
-    
-    <a href="/2016/02/29/被逼出的Blog/" class="alignright next" >下一页</a>
-    
-    <div class="clearfix"></div>
-</nav>
-
-<!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="/2016/07/18/CocoaPods-从安装到使用/" data-title="CocoaPods 从安装到使用" data-url="http://yoursite.com/2016/07/18/CocoaPods-从安装到使用/"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"zpaul"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
-</section>
+    var gitalk = new Gitalk({
+        clientID: '127508c32b906de4ac5d',
+        clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
+        id: window.location.pathname,
+        repo: 'XB-Paul.github.io',
+        owner: 'XB-Paul',
+        admin: 'XB-Paul'
+    })
+    gitalk.render('gitalk-container')
+</script>
 
-</div></div>
+{% elseif theme.gitalk.enable %}
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '127508c32b906de4ac5d',
+        clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
+        id: window.location.pathname,
+        repo: 'XB-Paul.github.io',
+        owner: 'XB-Paul',
+        admin: 'XB-Paul'
+    })
+    gitalk.render('gitalk-container')
+</script>
+{% endif %}</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
