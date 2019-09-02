@@ -1,65 +1,283 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+
+
+
+
+
 <html lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x600E;&amp;#x6837;&amp;#x79CD;&amp;#x4E00;&amp;#x68F5;&amp;#x6811;&amp;#xFF1F;&amp;#x7B2C;&amp;#x4E00;&amp;#x6B65;&amp;#xFF1A;&amp;#x786E;&amp;#x5B9A;&amp;#x6709;&amp;#x79CD;&amp;#x8FD9;&amp;#x68F5;&amp;#x6811;&amp;#x7684;&amp;#x5730;&amp;#x65B9;&amp;#x3002;&amp;#x7B2C;">
+<meta name="keywords" content="沉淀">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人员管理（未完待续...）">
+<meta property="og:url" content="http://xuebao.com/2019/08/29/人员管理/index.html">
+<meta property="og:site_name" content="学宝的博客">
+<meta property="og:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x600E;&amp;#x6837;&amp;#x79CD;&amp;#x4E00;&amp;#x68F5;&amp;#x6811;&amp;#xFF1F;&amp;#x7B2C;&amp;#x4E00;&amp;#x6B65;&amp;#xFF1A;&amp;#x786E;&amp;#x5B9A;&amp;#x6709;&amp;#x79CD;&amp;#x8FD9;&amp;#x68F5;&amp;#x6811;&amp;#x7684;&amp;#x5730;&amp;#x65B9;&amp;#x3002;&amp;#x7B2C;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-30T09:12:58.558Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="人员管理（未完待续...）">
+<meta name="twitter:description" content="&amp;#x5F15;&amp;#x8A00;&amp;#x600E;&amp;#x6837;&amp;#x79CD;&amp;#x4E00;&amp;#x68F5;&amp;#x6811;&amp;#xFF1F;&amp;#x7B2C;&amp;#x4E00;&amp;#x6B65;&amp;#xFF1A;&amp;#x786E;&amp;#x5B9A;&amp;#x6709;&amp;#x79CD;&amp;#x8FD9;&amp;#x68F5;&amp;#x6811;&amp;#x7684;&amp;#x5730;&amp;#x65B9;&amp;#x3002;&amp;#x7B2C;">
+  <link rel="canonical" href="http://xuebao.com/2019/08/29/人员管理/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
   <title>人员管理（未完待续...） | 学宝的博客</title>
-  <meta name="author" content="学宝">
-  
-  <meta name="description" content="聊聊技术，扯扯人生">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="人员管理（未完待续...）">
-  <meta property="og:site_name" content="学宝的博客">
-
-  
-    <meta property="og:image" content="undefined">
+  <meta name="generator" content="Hexo 3.9.0">
   
 
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="学宝的博客" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-<body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">学宝的博客</a></h1>
-  <h2><a href="/">仰望夜空，让泪水倒流</a></h2>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学宝的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">仰望夜空，让泪水倒流</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div>
-</header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-人员管理" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time class="dt-published" datetime="2019-08-29T08:36:38.000Z"><a href="/2019/08/29/人员管理/">2019-08-29</a></time>
-      
-      
-  
-    <h1 class="p-name title" itemprop="headline name">人员管理（未完待续...）</h1>
-  
 
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
     </header>
-    <div class="e-content entry" itemprop="articleBody">
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a class="book-mark-link book-mark-link-fixed" href="#"></a>
+
+  <a href="https://github.com/XB-Paul" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://xuebao.com/2019/08/29/人员管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="学宝">
+      <meta itemprop="description" content="聊聊技术，扯扯人生">
+      <meta itemprop="image" content="/images/my_avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学宝的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">人员管理（未完待续...）
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-29 16:36:38" itemprop="dateCreated datePublished" datetime="2019-08-29T16:36:38+08:00">2019-08-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-30 17:12:58" itemprop="dateModified" datetime="2019-08-30T17:12:58+08:00">2019-08-30</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span id="/2019/08/29/人员管理/" class="post-meta-item leancloud_visitors" data-flag-title="人员管理（未完待续...）" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <h1 id="&#x5F15;&#x8A00;"><a href="#&#x5F15;&#x8A00;" class="headerlink" title="&#x5F15;&#x8A00;"></a>&#x5F15;&#x8A00;</h1><p><strong>&#x600E;&#x6837;&#x79CD;&#x4E00;&#x68F5;&#x6811;&#xFF1F;</strong><br>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x786E;&#x5B9A;&#x6709;&#x79CD;&#x8FD9;&#x68F5;&#x6811;&#x7684;&#x5730;&#x65B9;&#x3002;<br>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5BFB;&#x6811;&#x82D7;&#x3002;<br>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x79CD;&#x6811;&#x82D7;&#xFF1A;&#x6316;&#x5751;&#x3001;&#x65BD;&#x80A5;&#x3001;&#x6276;&#x6B63;&#x5165;&#x5751;<br>&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x517B;&#x62A4;&#xFF1A;&#x5B9A;&#x671F;&#x6D47;&#x6C34;&#x65BD;&#x80A5;&#x3001;&#x4FEE;&#x526A;&#x3001;&#x642D;&#x652F;&#x6491;&#x67B6;<br>&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x2026;&#x2026;&#x2026;&#x2026;&#x4EF7;&#x503C;&#x2026;&#x2026;&#x2026;&#x2026;&#x53BB;&#x2026;&#x2026;&#x2026;&#x2026;&#x7559;&#x2026;&#x2026;&#x2026;&#x2026;</p>
 <a id="more"></a>
@@ -121,107 +339,380 @@ ps&#xFF1A;
 </ol>
 <p>&#x82E5;&#x662F;&#x94BB;&#x77F3;&#x6216;&#x738B;&#x8005;&#x6BB5;&#x4F4D;&#x7684;&#x7BA1;&#x7406;&#x8005;&#xFF0C;&#x53EF;&#x80FD;&#x6CA1;&#x6709;&#x8FD9;&#x4E48;&#x591A;&#x8BF4;&#x6CD5;&#x3002;But&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x5DF2;&#x7ECF;&#x5F62;&#x6210;&#x90A3;&#x79CD;&#x601D;&#x7EF4;&#x4E86;&#xFF0C;&#x4E0D;&#x7528;&#x4EE5;&#x6587;&#x5B57;&#x5F62;&#x5F0F;&#x4F53;&#x73B0;&#x3002;&#x4F60;&#x82E5;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x9752;&#x94DC;&#x6216;&#x94C2;&#x91D1;&#xFF0C;&#x8BF7;&#x8BA4;&#x771F;&#x5BF9;&#x5F85;&#x3002;&#x6BD5;&#x7ADF;&#xFF0C;&#x673A;&#x4F1A;&#x662F;&#x7559;&#x7ED9;&#x5E05;&#x7684;&#x4EBA;&#xFF0C;&#x6070;&#x597D;&#x8BA4;&#x771F;&#x7684;&#x4EBA;&#x90FD;&#x5F88;&#x5E05;&#x3002;</p>
 <h2 id="&#x5DE5;&#x4F5C;&#x5B89;&#x6392;"><a href="#&#x5DE5;&#x4F5C;&#x5B89;&#x6392;" class="headerlink" title="&#x5DE5;&#x4F5C;&#x5B89;&#x6392;"></a>&#x5DE5;&#x4F5C;&#x5B89;&#x6392;</h2><h2 id="&#x57F9;&#x517B;&#x63A5;&#x66FF;&#x4EBA;"><a href="#&#x57F9;&#x517B;&#x63A5;&#x66FF;&#x4EBA;" class="headerlink" title="&#x57F9;&#x517B;&#x63A5;&#x66FF;&#x4EBA;"></a>&#x57F9;&#x517B;&#x63A5;&#x66FF;&#x4EBA;</h2><h1 id="&#x8C03;&#x6574;&#x5458;&#x5DE5;"><a href="#&#x8C03;&#x6574;&#x5458;&#x5DE5;" class="headerlink" title="&#x8C03;&#x6574;&#x5458;&#x5DE5;"></a>&#x8C03;&#x6574;&#x5458;&#x5DE5;</h1><h2 id="&#x8C03;&#x85AA;"><a href="#&#x8C03;&#x85AA;" class="headerlink" title="&#x8C03;&#x85AA;"></a>&#x8C03;&#x85AA;</h2><h2 id="&#x7559;&#x4EBA;"><a href="#&#x7559;&#x4EBA;" class="headerlink" title="&#x7559;&#x4EBA;"></a>&#x7559;&#x4EBA;</h2><h2 id="&#x529D;&#x9000;"><a href="#&#x529D;&#x9000;" class="headerlink" title="&#x529D;&#x9000;"></a>&#x529D;&#x9000;</h2>
-      
     </div>
-    <footer>
-      
+
+    
+    
+    
         
-  
-  <div class="categories">
-    <a href="/categories/管理/">管理</a>
-  </div>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/沉淀/" rel="tag"><i class="fa fa-tag"></i> 沉淀</a>
+            
+          </div>
+        
 
         
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/27/学宝的自我管理/" rel="next" title="学宝的自我管理">
+                  <i class="fa fa-chevron-left"></i> 学宝的自我管理
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
   
-  <div class="tags">
-    <a href="/tags/沉淀/">沉淀</a>
+  
+  
+  </article>
+
   </div>
 
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
       
-      <div class="clearfix"></div>
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#招员工"><span class="nav-number">2.</span> <span class="nav-text">招员工</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用员工"><span class="nav-number">3.</span> <span class="nav-text">用员工</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#日常沟通"><span class="nav-number">3.1.</span> <span class="nav-text">日常沟通</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#沟通的作用"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">沟通的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#沟通的执行"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">沟通的执行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作安排"><span class="nav-number">3.2.</span> <span class="nav-text">工作安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#培养接替人"><span class="nav-number">3.3.</span> <span class="nav-text">培养接替人</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#调整员工"><span class="nav-number">4.</span> <span class="nav-text">调整员工</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调薪"><span class="nav-number">4.1.</span> <span class="nav-text">调薪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#留人"><span class="nav-number">4.2.</span> <span class="nav-text">留人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#劝退"><span class="nav-number">4.3.</span> <span class="nav-text">劝退</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/my_avatar.jpeg"
+      alt="学宝">
+  <p class="site-author-name" itemprop="name">学宝</p>
+  <div class="site-description" itemprop="description">聊聊技术，扯扯人生</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/XB-Paul" title="GitHub &rarr; https://github.com/XB-Paul" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:zhanxuebao@outlook.com" title="E-Mail &rarr; mailto:zhanxuebao@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jianshu.com/u/72a7e92f0df5" title="https://www.jianshu.com/u/72a7e92f0df5" rel="noopener" target="_blank">简书</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">学宝</span>
+</div>
+
+        
+
+
+
+
+
+
+  
+  <script>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+            
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=AdrDqSULpAoNhjJ582dr9uTm-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'AdrDqSULpAoNhjJ582dr9uTm-gzGzoHsz',
+            'X-LC-Key': 'aTUTbD0xEUC8ATtotPop1bkf',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+
+        
+      </div>
     </footer>
   </div>
-</article>
 
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  
 
-<section id="comment">
-  <h1 class="title">留言</h1>
-  <div id="gitalk-container"></div>
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.11.1/js/md5.min.js"></script>
-  <script type="text/javascript">
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script><script src="/js/bookmark.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
     var gitalk = new Gitalk({
-        clientID: '127508c32b906de4ac5d',
-        clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
-        id: md5(window.location.pathname),
-        repo: 'XB-Paul.github.io',
-        owner: 'XB-Paul',
-        admin: 'XB-Paul'
-    })
-    gitalk.render('gitalk-container')
-    </script>
-  </section>
-
-
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="as_sitesearch" value="xuebao.com">
-  </form>
-</div>
-
-
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/CocoaPods/">CocoaPods</a><small>1</small></li>
-  
-    <li><a href="/categories/Objective-C/">Objective-C</a><small>1</small></li>
-  
-    <li><a href="/categories/我/">我</a><small>1</small></li>
-  
-    <li><a href="/categories/管理/">管理</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-
-  
-<div class="widget tag">
-  <h3 class="title">标签</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/工具/">工具</a><small>1</small></li>
-  
-    <li><a href="/tags/开发/">开发</a><small>1</small></li>
-  
-    <li><a href="/tags/扯淡/">扯淡</a><small>1</small></li>
-  
-    <li><a href="/tags/沉淀/">沉淀</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2019 学宝
-  
-</div>
-<div class="clearfix"></div></footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-
-
+      clientID: '127508c32b906de4ac5d',
+      clientSecret: 'bf409867b7b5e84605c7c78a4e967a18a7078632',
+      repo: 'XB-Paul.github.io',
+      owner: 'XB-Paul',
+      admin: ['XB-Paul'],
+      id: '6ad0df00b520a65176155ba2c0c34ce7',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 </body>
 </html>
