@@ -1,3 +1,6 @@
 !.deploy_git
 node_modules
 node_modules
+public/
+themes/
+!themes/*/_config.yml
