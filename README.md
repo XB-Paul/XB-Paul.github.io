@@ -10,7 +10,7 @@ Hexo主题文件被忽略。
 
 譬如获取经过我个人修改配置的next主题。
 
-    git clone git@github.com:XB-Paul/hexo-theme-next.git theme/next
+    git clone git@github.com:XB-Paul/hexo-theme-next.git themes/next
 
 ps：我建议采用Fork主题仓库的方式，此方式便于获取到主题仓库的更新 和 进行个人配置的修改。
 
@@ -19,6 +19,7 @@ ps：我建议采用Fork主题仓库的方式，此方式便于获取到主题�
 安装npm依赖
     
     $ npm install
+    $ npm install -g hexo-cli
     
 
 本地预览
