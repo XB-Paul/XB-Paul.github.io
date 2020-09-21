@@ -1,7 +1,7 @@
 ---
 title: CocoaPods 从安装到使用
 date: 2016-07-18 13:27:15
-category: CocoaPods
+category: iOS
 tags: 工具
 
 ---
@@ -242,7 +242,7 @@ pod install 命令执行成功只有，工程根目录会多了`.xcworkspace`、
 
 -------
 
-言子玉 · 出品   @2020-09-17
+学宝 · 出品   @2020-09-17
 
 仰望星空，让泪水倒流
 

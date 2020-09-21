@@ -2,6 +2,7 @@
 layout: npm
 title: npm publish过滤部分文件
 date: 2020-09-21 10:20:09
+category: npm
 tags:
 ---
 npm publish 的时候会把项目目录里面所有的文件都publish到npm仓库中， 但是往往有一部分目录和文件不想发布上去，比如项目的源码、编译脚本等等信息。
@@ -67,6 +68,6 @@ LICENSE / LICENCE
 
 
 ------
-言子玉 · 出品  @ 2019-03-26
+学宝 · 出品  @ 2019-03-26
 
 仰望星空，让泪水倒流
