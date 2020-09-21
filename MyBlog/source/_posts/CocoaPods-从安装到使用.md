@@ -5,6 +5,8 @@ category: CocoaPods
 tags: 工具
 
 ---
+CocoaPods是Swift和Objective-C Cocoa项目的依赖管理器。目前拥有超过76000个库，在超过300万个应用程序中使用。CocoaPods可以帮助你在iOS项目中统一管理第三方开源库。
+
 没用使用[CocoaPods](https://cocoapods.org/)之前：
 
  1. 我们需要将第三方的源代码文件复制到项目中
@@ -18,49 +20,162 @@ CocoaPods作为iOS开发的依赖管理工具，它的出现可以给开发者�
 
 CocoaPods 的安装
 -----
-Mac 下都自带 ruby ，但是经过我的实验，不同版本的 ruby 安装出的 cocoapods 的版本也是不同。我在没有更新ruby 的情况下安装的 cocoapods 是0.39.0版本，更新 ruby 之后
 
-	ruby --version
-	#ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
-	
-当然是用0.39.0的cocoapods，也是可以正常使用的。
+- ### (前提)Homebrew：macOS软件包的管理器
 
-** 若更新 ruby **，你需要使用[Homebrew](http://brew.sh/index_zh-cn.html)。安装 Homebrew ：
+    [Homebrew官网](https://brew.sh/index_zh-cn)
+    
+  - **有vpn的用户：**
+	  - 安装
+        
+        ```
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        ```
+      - 卸载
+          
+        ```
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+        ```
 
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	
-Homebrew 的简单使用：
+  - **没有vpn的用户：**
+    
+    1. 创建Homebrew文件夹（若已存在/usr/local/Homebrew，先将其删除）
+       
+		```
+		sudo mkdir /usr/local/Home-brew
+		```
+    2. git clone国内的brew镜像包
 
-* 搜索软件：brew search 软件名，如brew search wget
-* 安装软件：brew install 软件名，如brew install wget
-* 卸载软件：brew remove 软件名，如brew remove wget
+		```
+		sudo git clone https://mirrors.ustc.edu.cn/brew.git /usr/local/Homebrew
+		或者 
+		sudo git clone https://mirrors.aliyun.com/homebrew/brew.git /usr/local/Homebrew
+		或者 
+		sudo git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git /usr/local/Homebrew
+		```
+    3. 创建一个快捷方式到/usr/local/bin目录(若/usr/local/bin文件夹中已有brew，先将其删除)
+      
+		```
+		sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew
+		```
+    4. 创建homebrew-core文件夹
 
-** 使用 Homebrew 更新 ruby **：
+		```
+		sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/home-brew-core
+		```
+    5. git clone国内的homebrew-core镜像包
+        
+		```
+		sudo git clone https://mirrors.ustc.edu.cn/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+		或者 
+		sudo git clone https://mirrors.aliyun.com/homebrew/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+		或者 
+		sudo git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
+		```
+    6. 配置权限 + 更新
 
-	brew install ruby
+		```
+		sudo chown -R $(whoami) /usr/local/Homebrew
+		brew update
+		```
+	7. 设置Homebrew端口
+            
+		```
+		echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc 
+		echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+		```
+    8. OK! 可尝试自检
+        
+		```
+		brew doctor
+		```
+      
+        
+>     Homebrew 的简单使用：
+>      搜索软件：brew search 软件名，如brew search wget
+>      安装软件：brew install 软件名，如brew install wget
+>      卸载软件：brew remove 软件名，如brew remove wget
 
-** gem sources 的处理 **。ruby 的软件源 <https://rubygems.org> 因为使用的是亚马逊的云服务，所以被墙了，需要更新一下 ruby 的源，使用如下代码将官方的 ruby 源替换成国内淘宝的源：
 
-	gem sources -l
-	gem sources --remove https://rubygems.org/
-	gem sources -a https://ruby.taobao.org/
-	gem sources -l
+- ### (前提)Ruby
 
-** 升级 gem **
+    [Ruby官网](https://www.ruby-lang.org/)
+    
+    - 查看当前Ruby版本
+    
+        ```
+        ruby -v
+        ```
+    - 升级Ruby环境
+        
+        ```
+        curl -L get.rvm.io | bash -s stable 
 
-	sudo gem update --system
+        source ~/.bashrc
+        
+        source ~/.bash_profile
+        ```
+    - 查看可安装的版本
+        
+        ```
+        rvm list known
+        ```
+    - 选择一个Ruby版本进行安装（我一般选择倒数第二个版本）
+            
+        ```
+        rvm install x.x.x
+        ```
+    - 设置默认版本
+    
+        ```
+        rvm use x.x.x --default
+		```
+    - 更新Gem + 更换源
+        
+        ```
+        sudo gem update --system
+        
+        gem sources -l
+        
+        gem sources --remove 当前的源
+        
+        gem sources --add https://gems.ruby-china.com/
+        ```
+        
+- ### CocoaPods 
+    
+    [CocoaPods官网](https://cocoapods.org)
 
-使用 ruby 的 gem 命令** 安装 cocoapods **:
-
-	sudo gem install cocoapods
-	pod setup			
-
-`pod setup`执行后，会输出`Setting up CocoaPods master repo`，这一步骤是Cocoapods将它的信息下载到`~/.cocoapods`目录下，耗时会比较久。这时你只要耐心等待就好。
-
-配置完成之后，查看 cocoapods 版本：
-
-	pod --version
-	#1.0.1 //之后版本变化，都会是 cocoapods 的最新版本
+    - 安装CocoaPods
+    
+        ```
+        sudo gem install -n /usr/local/bin cocoapods
+		```
+    - clone repo库
+    
+        方式一：官方的方法（速度很慢）
+        
+        ```
+        pod setup
+        ```
+        方式二：直接clone国内的镜像
+        
+        新版的CocoaPods不允许用pod repo add直接添加master库，可执行
+         
+        ```
+        cd ~/.cocoapods/repos
+        pod repo remove master
+        git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git
+        ```
+        这种方式，在工程中的podfile文件第一行加上：
+        ```
+        source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+        ```
+    - Done！恭喜你！
+       最后，再贴一下造福国人的镜像站：
+       - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
+       - [中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn)
+       - [阿里云官方镜像站](https://mirrors.aliyun.com)
 	
 ----
 CocoaPods 的使用
@@ -123,3 +238,13 @@ pod install 命令执行成功只有，工程根目录会多了`.xcworkspace`、
 
 ### 关于 Podfile.lock
 当你执行`pod install`之后，CocoaPods 还会生成一个名为Podfile.lock的文件，`Podfile.lock` 应该加入到版本控制里面，不应该把这个文件加入到`.gitignore`中。因为`Podfile.lock`会锁定当前各依赖库的版本，之后如果多次执行`pod install` 不会更改版本，要`pod update`才会改`Podfile.lock`了。这样多人协作的时候，可以防止第三方库升级时造成大家各自的第三方库版本不一致。
+
+
+-------
+
+言子玉 · 出品   @2020-09-17
+
+仰望星空，让泪水倒流
+
+
+
