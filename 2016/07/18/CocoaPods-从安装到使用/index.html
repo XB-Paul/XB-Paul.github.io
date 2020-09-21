@@ -60,10 +60,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="CocoaPods 从安装到使用">
 <meta property="og:url" content="http://xuebao.com/2016/07/18/CocoaPods-从安装到使用/index.html">
-<meta property="og:site_name" content="言子玉的博客">
+<meta property="og:site_name" content="学宝的博客">
 <meta property="og:description" content="CocoaPods是Swift和Objective-C Cocoa项目的依赖管理器。目前拥有超过76000个库，在超过300万个应用程序中使用。CocoaPods可以帮助你在iOS项目中统一管理第三方开源库。 没用使用CocoaPods之前：  我们需要将第三方的源代码文件复制到项目中 可能需要各种配置 需要关注依赖包的更新，并手动处理  这些活很烦、没含量、浪费时间。这些问题随着CocoaPod">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-21T02:21:45.475Z">
+<meta property="og:updated_time" content="2020-09-21T03:19:55.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CocoaPods 从安装到使用">
 <meta name="twitter:description" content="CocoaPods是Swift和Objective-C Cocoa项目的依赖管理器。目前拥有超过76000个库，在超过300万个应用程序中使用。CocoaPods可以帮助你在iOS项目中统一管理第三方开源库。 没用使用CocoaPods之前：  我们需要将第三方的源代码文件复制到项目中 可能需要各种配置 需要关注依赖包的更新，并手动处理  这些活很烦、没含量、浪费时间。这些问题随着CocoaPod">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>CocoaPods 从安装到使用 | 言子玉的博客</title>
+  <title>CocoaPods 从安装到使用 | 学宝的博客</title>
   
 
 
@@ -128,7 +128,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">言子玉的博客</span>
+        <span class="site-title">学宝的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -243,13 +243,13 @@
     <link itemprop="mainEntityOfPage" href="http://xuebao.com/2016/07/18/CocoaPods-从安装到使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="言子玉">
+      <meta itemprop="name" content="学宝">
       <meta itemprop="description" content="聊聊技术，扯扯人生">
       <meta itemprop="image" content="/images/my_avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="言子玉的博客">
+      <meta itemprop="name" content="学宝的博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">CocoaPods 从安装到使用
@@ -279,7 +279,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-21 10:21:45" itemprop="dateModified" datetime="2020-09-21T10:21:45+08:00">2020-09-21</time>
+                <time title="修改时间：2020-09-21 11:19:55" itemprop="dateModified" datetime="2020-09-21T11:19:55+08:00">2020-09-21</time>
               </span>
             
           
@@ -289,7 +289,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CocoaPods/" itemprop="url" rel="index"><span itemprop="name">CocoaPods</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
 
                 
                 
@@ -333,59 +333,47 @@
 <ul>
 <li><p>安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</span><br></pre></td></tr></table></figure>
-
-
+</li>
+<li><p>卸载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)&quot;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-<pre><code>- 卸载
-
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)&quot;</span><br></pre></td></tr></table></figure></code></pre><ul>
 <li><p><strong>没有vpn的用户：</strong></p>
 <ol>
 <li><p>创建Homebrew文件夹（若已存在/usr/local/Homebrew，先将其删除）</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/local/Home-brew</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/local/Home-brew</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>git clone国内的brew镜像包</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo git clone https://mirrors.ustc.edu.cn/brew.git /usr/local/Homebrew</span><br><span class="line">或者 </span><br><span class="line">sudo git clone https://mirrors.aliyun.com/homebrew/brew.git /usr/local/Homebrew</span><br><span class="line">或者 </span><br><span class="line">sudo git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git /usr/local/Homebrew</span><br></pre></td></tr></table></figure>
-
-
 </li>
-</ol>
+<li><p>创建一个快捷方式到/usr/local/bin目录(若/usr/local/bin文件夹中已有brew，先将其删除)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建homebrew-core文件夹</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/home-brew-core</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git clone国内的homebrew-core镜像包</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo git clone https://mirrors.ustc.edu.cn/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</span><br><span class="line">或者 </span><br><span class="line">sudo git clone https://mirrors.aliyun.com/homebrew/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</span><br><span class="line">或者 </span><br><span class="line">sudo git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置权限 + 更新</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) /usr/local/Homebrew</span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置Homebrew端口</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&apos; &gt;&gt; ~/.zshrc </span><br><span class="line">echo &apos;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&apos; &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OK! 可尝试自检</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ol>
 </li>
 </ul>
-<pre><code>3. 创建一个快捷方式到/usr/local/bin目录(若/usr/local/bin文件夹中已有brew，先将其删除)
-
-     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/local/Homebrew/bin/brew /usr/local/bin/brew</span><br></pre></td></tr></table></figure>
-
- 4. 创建homebrew-core文件夹
-
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /usr/local/Homebrew/Library/Taps/homebrew/home-brew-core</span><br></pre></td></tr></table></figure>
-
-
-5. git clone国内的homebrew-core镜像包
-
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> sudo git clone https://mirrors.ustc.edu.cn/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</span><br><span class="line">或者 </span><br><span class="line"> sudo git clone https://mirrors.aliyun.com/homebrew/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</span><br><span class="line">或者 </span><br><span class="line">sudo git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core</span><br></pre></td></tr></table></figure>
-
-
-6. 配置权限 + 更新
-
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) /usr/local/Homebrew</span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
-
-
-7. 设置Homebrew端口
-
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&apos; &gt;&gt; ~/.zshrc </span><br><span class="line">echo &apos;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&apos; &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-8. OK! 可尝试自检
-
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure></code></pre><blockquote>
+</li>
+</ul>
+<blockquote>
 <pre><code>Homebrew 的简单使用：
  搜索软件：brew search 软件名，如brew search wget
  安装软件：brew install 软件名，如brew install wget
@@ -395,68 +383,55 @@
 <ul>
 <li><p>查看当前Ruby版本</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级Ruby环境</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -L get.rvm.io | bash -s stable </span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看可安装的版本</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm list known</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择一个Ruby版本进行安装（我一般选择倒数第二个版本）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm install x.x.x</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置默认版本</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm use x.x.x --default</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新Gem + 更换源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo gem update --system</span><br><span class="line"></span><br><span class="line">gem sources -l</span><br><span class="line"></span><br><span class="line">gem sources --remove 当前的源</span><br><span class="line"></span><br><span class="line">gem sources --add https://gems.ruby-china.com/</span><br></pre></td></tr></table></figure>
 
 
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>- 升级Ruby环境
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -L get.rvm.io | bash -s stable </span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-
-- 查看可安装的版本
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm list known</span><br></pre></td></tr></table></figure>
-
-
-- 选择一个Ruby版本进行安装（我一般选择倒数第二个版本）
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm install x.x.x</span><br></pre></td></tr></table></figure>
-
-
-- 设置默认版本
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm use x.x.x --default</span><br></pre></td></tr></table></figure>
-
-
-- 更新Gem + 更换源
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo gem update --system</span><br><span class="line"></span><br><span class="line">gem sources -l</span><br><span class="line"></span><br><span class="line">gem sources --remove 当前的源</span><br><span class="line"></span><br><span class="line">gem sources --add https://gems.ruby-china.com/</span><br></pre></td></tr></table></figure></code></pre><ul>
+<ul>
 <li><h3 id="CocoaPods"><a href="#CocoaPods" class="headerlink" title="CocoaPods"></a>CocoaPods</h3><p>  <a href="https://cocoapods.org" target="_blank" rel="noopener">CocoaPods官网</a></p>
 <ul>
 <li><p>安装CocoaPods</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install -n /usr/local/bin cocoapods</span><br></pre></td></tr></table></figure>
-
-
 </li>
+<li><p>clone repo库</p>
+<p>  方式一：官方的方法（速度很慢）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br></pre></td></tr></table></figure>
+
+<p>  方式二：直接clone国内的镜像</p>
+<p>  新版的CocoaPods不允许用pod repo add直接添加master库，可执行</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.cocoapods/repos</span><br><span class="line">pod repo remove master</span><br><span class="line">git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git</span><br></pre></td></tr></table></figure>
+
+<p>  这种方式，在工程中的podfile文件第一行加上：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Done！恭喜你！<br> 最后，再贴一下造福国人的镜像站：</p>
+<ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像站</a></li>
+<li><a href="https://mirrors.ustc.edu.cn" target="_blank" rel="noopener">中国科学技术大学开源软件镜像</a></li>
+<li><a href="https://mirrors.aliyun.com" target="_blank" rel="noopener">阿里云官方镜像站</a></li>
 </ul>
 </li>
 </ul>
-<pre><code>- clone repo库
-
-    方式一：官方的方法（速度很慢）
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br></pre></td></tr></table></figure>
-
-
-    方式二：直接clone国内的镜像
-
-    新版的CocoaPods不允许用pod repo add直接添加master库，可执行
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.cocoapods/repos</span><br><span class="line">pod repo remove master</span><br><span class="line">git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git</span><br></pre></td></tr></table></figure>
-
-
-    这种方式，在工程中的podfile文件第一行加上：
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git&apos;</span><br></pre></td></tr></table></figure>
-
-
-- Done！恭喜你！
-   最后，再贴一下造福国人的镜像站：
-   - [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
-   - [中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn)
-   - [阿里云官方镜像站](https://mirrors.aliyun.com)</code></pre><hr>
+</li>
+</ul>
+<hr>
 <h2 id="CocoaPods-的使用"><a href="#CocoaPods-的使用" class="headerlink" title="CocoaPods 的使用"></a>CocoaPods 的使用</h2><p>查找你要使用的第三方库，比如搜索 BHNetwork</p>
 <pre><code>pod search BHNetwork
 #-&gt; BHNetwork (0.0.1)
@@ -489,7 +464,7 @@ pod install</code></pre><p>pod install 命令执行成功只有，工程根目�
 pod update</code></pre><p>你可以使用 <code>pod update --no-repo-update</code> 来替换 <code>pod update</code>，都说替换之后，执行会快一点。</p>
 <h3 id="关于-Podfile-lock"><a href="#关于-Podfile-lock" class="headerlink" title="关于 Podfile.lock"></a>关于 Podfile.lock</h3><p>当你执行<code>pod install</code>之后，CocoaPods 还会生成一个名为Podfile.lock的文件，<code>Podfile.lock</code> 应该加入到版本控制里面，不应该把这个文件加入到<code>.gitignore</code>中。因为<code>Podfile.lock</code>会锁定当前各依赖库的版本，之后如果多次执行<code>pod install</code> 不会更改版本，要<code>pod update</code>才会改<code>Podfile.lock</code>了。这样多人协作的时候，可以防止第三方库升级时造成大家各自的第三方库版本不一致。</p>
 <hr>
-<p>言子玉 · 出品   @2020-09-17</p>
+<p>学宝 · 出品   @2020-09-17</p>
 <p>仰望星空，让泪水倒流</p>
 
     </div>
@@ -585,8 +560,8 @@ pod update</code></pre><p>你可以使用 <code>pod update --no-repo-update</cod
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
       src="/images/my_avatar.jpeg"
-      alt="言子玉">
-  <p class="site-author-name" itemprop="name">言子玉</p>
+      alt="学宝">
+  <p class="site-author-name" itemprop="name">学宝</p>
   <div class="site-description" itemprop="description">聊聊技术，扯扯人生</div>
 </div>
   <nav class="site-state motion-element">
@@ -603,7 +578,7 @@ pod update</code></pre><p>你可以使用 <code>pod update --no-repo-update</cod
       
       <div class="site-state-item site-state-categories">
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         
       </div>
@@ -694,7 +669,7 @@ pod update</code></pre><p>你可以使用 <code>pod update --no-repo-update</cod
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">言子玉</span>
+  <span class="author" itemprop="copyrightHolder">学宝</span>
 </div>
 
         
